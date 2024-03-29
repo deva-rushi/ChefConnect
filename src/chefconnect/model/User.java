@@ -5,58 +5,21 @@
 package chefconnect.model;
 
 import chefconnect.utility.CustomHashing;
+import lombok.Data;
 
 /**
  *
  * @author rakadadevarushikamidi
  */
+@Data
 public class User {
+    
     private String Firstname;
     private String Lastname;
     private String Email;
     private String Username;
     private String Password;
 
-    public String getFirstname() {
-        return Firstname;
-    }
-
-    public void setFirstname(String Firstname) {
-        this.Firstname = Firstname;
-    }
-
-    public String getLastname() {
-        return Lastname;
-    }
-
-    public void setLastname(String Lastname) {
-        this.Lastname = Lastname;
-    }
-
-    public String getEmail() {
-        return Email;
-    }
-
-    public void setEmail(String Email) {
-        this.Email = Email;
-    }
-
-    public String getUsername() {
-        return Username;
-    }
-
-    public void setUsername(String Username) {
-        this.Username = Username;
-    }
-
-    public String getPassword() {
-        return Password;
-    }
-
-    public void setPassword(String Password) {
-        this.Password = Password;
-    }
-    
     public static String hashPassword(String plainPassword) {
         return CustomHashing.customHash(plainPassword);
     }

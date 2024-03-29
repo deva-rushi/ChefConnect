@@ -5,25 +5,19 @@
 package chefconnect.model;
 
 import chefconnect.collections.ArrayBag;
+import lombok.Data;
 
 /**
  *
  * @author rakadadevarushikamidi
  */
+@Data
 public class UserDirectory {
     
     private ArrayBag<User> userList;
 
     public UserDirectory() {
         this.userList = new ArrayBag<User>();     
-    }
-
-    public ArrayBag<User> getUserList() {
-        return userList;
-    }
-
-    public void setUserList(ArrayBag<User> userList) {
-        this.userList = userList;
     }
    
     public User addUser(){
